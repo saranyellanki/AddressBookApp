@@ -10,14 +10,61 @@
 <body>
     <header class="header-content header">
         <div class="logo-content">
+            <img src="../assets/img.jpg">
             <div>
                 <span class="add-text">ADDRESS</span><br>
                 <span class="add-text add-book">BOOK</span>
             </div>
         </div>
     </header>
-    <div class="main-content">
-        
+    <div class="form-content">
+        <form class="form">
+            <div class="form-head">
+                <div class="form-heading">PERSON ADDRESS FORM</div>
+                <div class="cancel-button">
+                    <img src="../assets/cancel.jpg" alt="cancel">
+                </div>
+            </div>
+            <div class="row-content">
+                <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="row-content">
+                <textarea id="Address" class="input" name="Address" placeholder="Address" style="height: 100px;"></textarea>
+            </div>
+            <div class="row-content">
+                <select id="city" name="city">
+                    <option aria-placeholder="Select City">Select City</option>
+                    <option value="1">Visakhapatnam</option>
+                    <option value="2">Hyderabad</option>
+                    <option value="3">Mumbai</option>
+                    <option value="4">Banglore</option>
+                    <option value="5">Delhi</option>
+                    <option value="6">Kochi</option>
+                    <option value="7">Vijayawada</option>
+                    <option value="8">Kolkata</option>
+                </select>
+                <select id="state" name="state">
+                    <option aria-placeholder="Select State">Select State</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="TS">Telangana</option>
+                    <option value="MH">Maharastra</option>
+                    <option value="KN">Karnataka</option>
+                    <option value="ND">New Delhi</option>
+                    <option value="KR">Kerala</option>
+                    <option value="WB">West Bengal</option>
+                </select>
+                <input class="zip-text" id="zipcode" name="zipcode" type="text" placeholder="Zip Code">
+            </div>
+            <div class="row-content">
+                <input id="Phone number" class="input" name="Phone Number" placeholder="Phone Number"></input>
+            </div>
+            <div class="buttonParent">
+                <div class="add-reset">
+                    <button type="submit" class="button addButton" id="addButton">Add</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
