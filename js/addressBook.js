@@ -61,7 +61,7 @@ class AddressBookData {
             this._zipcode = zipcode;
         else throw "Invalid Zip Code"
     }
-
+    //to string method
     toString(){
         return "id : "+this.id+", Name : "+this.name+", Address : "+this.address+", Phone : "+this.phoneNumber+
         ", State : "+this.state+", City : "+this.city+", ZipCode : "+this.zipcode;
