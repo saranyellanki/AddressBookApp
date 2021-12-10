@@ -4,7 +4,7 @@ class AddressBookData {
         return this._name; 
     }
     set name(name){ 
-        let nameRegex = RegExp('^([A-Z]{1}[a-z]{2,}.)+$');
+        let nameRegex = RegExp('^([A-Z]{1}[a-z]{2,}[ ]{0,1})+$');
         if(nameRegex.test(name)) 
             this._name = name;
         else throw "Name is Incorrect";
@@ -64,6 +64,6 @@ class AddressBookData {
 
     toString(){
         return "id : "+this.id+", Name : "+this.name+", Address : "+this.address+", Phone : "+this.phoneNumber+
-        ", State : "+this.state+", City : "+this.city;
+        ", State : "+this.state+", City : "+this.city+", ZipCode : "+this.zipcode;
     }
 }
