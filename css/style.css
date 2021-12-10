@@ -149,3 +149,10 @@ select {
     background-color: #e9e9e9;
     margin-right: 30px;
 }
+
+error-output {
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
