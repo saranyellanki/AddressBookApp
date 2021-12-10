@@ -92,3 +92,26 @@ const createAndUpdateStorage = (addressBookData) => {
     alert(addressBookList.toString());
     localStorage.setItem("AddressBookList",JSON.stringify(addressBookList));
 }
+
+const resetForm = () => {
+    setValue('#name','');
+    setTextValue('.text-error','');
+    setValue('#address','');
+    setTextValue('.address-output','');
+    setValue('#city','Select City');
+    setValue('#state','Select State');
+    setValue('#zipcode','');
+    setTextValue('.zip-error','');
+    setValue('#phone','');
+    setTextValue('.number-error','');
+}
+
+const setTextValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.textContent = value;
+}
+
+const setValue = (id,value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
