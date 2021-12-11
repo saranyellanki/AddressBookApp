@@ -77,7 +77,6 @@ const createAddressBook = () => {
     addressBook.state = document.querySelector('#state').value;
     addressBook.zipcode = document.querySelector('#zipcode').value;
     addressBook.phoneNumber = document.querySelector('#phone').value;
-    alert(addressBook.toString());
     return addressBook;
 }
 
