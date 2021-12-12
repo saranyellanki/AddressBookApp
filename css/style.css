@@ -153,8 +153,51 @@ select {
 }
 
 error-output {
-    margin-left: 10px;
     font-size: 12px;
     font-style: italic;
     color: red;
+}
+
+.text-error {
+    display: flex;
+    min-height: 20px;
+    border: 0px solid black;
+    margin-left: 87%;
+    margin-top: -6%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    flex-direction: row;
+}
+
+.address-error {
+    display: flex;
+    min-height: 20px;
+    border: 0px solid black;
+    margin-left: 87%;
+    margin-top: -9%;
+    margin-right: 3%;
+    margin-bottom: 8%;
+    flex-direction: row;
+}
+
+.zip-error {
+    display: flex;
+    min-height: 20px;
+    border: 0px solid black;
+    margin-left: 87%;
+    margin-top: -6%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    flex-direction: row;
+}
+
+.number-error {
+    display: flex;
+    min-height: 30px;
+    border: 0px solid black;
+    margin-left: 87%;
+    margin-top: -6.5%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    flex-direction: row;
 }

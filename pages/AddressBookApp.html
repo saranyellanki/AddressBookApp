@@ -29,15 +29,15 @@
             </div>
             <div class="row-content">
                 <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
-                <error-output class="text-error" for="text"></error-output>
             </div>
+            <div><error-output class="text-error" for="text"></error-output></div>
             <div class="row-content">
                 <textarea id="address" class="input" name="address" placeholder="Address" style="height: 100px;"></textarea>
-                <error-output class="address-output" for="text"></error-output>
             </div>
+            <div><error-output class="address-error" for="text"></error-output></div>
             <div class="row-content">
-                <select id="city" name="city">
-                    <option aria-placeholder="Select City" aria-required="true">Select City</option>
+                <select id="city" name="city" required>
+                    <option aria-placeholder="Select City" aria-required="true" value="">Select City</option>
                     <option value="Visakhapatnam">Visakhapatnam</option>
                     <option value="Hyderabad">Hyderabad</option>
                     <option value="Mumbai">Mumbai</option>
@@ -48,7 +48,7 @@
                     <option value="Kolkata">Kolkata</option>
                 </select>
                 <select id="state" name="state">
-                    <option aria-placeholder="Select State">Select State</option>
+                    <option aria-placeholder="Select State" aria-required="true" value="">Select State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Telangana">Telangana</option>
                     <option value="Maharastra">Maharastra</option>
@@ -58,12 +58,12 @@
                     <option value="West Bengal">West Bengal</option>
                 </select>
                 <input class="zip-text" id="zipcode" name="zipcode" type="text" placeholder="Zip Code">
-                <error-output class="zip-error" for="text"></error-output>
             </div>
+            <div><error-output class="zip-error" for="text"></error-output></div>
             <div class="row-content">
                 <input id="phone" type="text" class="input" name="phone" placeholder="Phone Number"></input>
-                <error-output class="number-error" for="text"></error-output>
             </div>
+            <div><error-output class="number-error" for="text"></error-output></div>
             <div class="buttonParent">
                 <div class="add-reset">
                     <button type="submit" class="button addButton" id="addButton">Add</button>
