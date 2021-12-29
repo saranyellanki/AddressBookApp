@@ -1,4 +1,5 @@
 class AddressBookData {
+    id;
 
     get name() { 
         return this._name; 
@@ -42,14 +43,6 @@ class AddressBookData {
     }
     set state(state) {
         this._state = state;
-    }
-
-    get id() {
-        return this._id;
-    }
-    set id(id){
-        if(id>0) this._id = id;
-        else throw "ID is not valid"
     }
 
     get zipcode() {

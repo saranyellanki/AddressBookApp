@@ -27,8 +27,8 @@ const createInnerHtml = () => {
         <td>${addressBook._zipcode}</td>
         <td>${addressBook._phoneNumber}</td>
         <td>
-            <img id="${addressBook._name}" onclick="remove(this)" alt="delete" src="../assets/delete-black-18dp.svg">
-            <img id="${addressBook._name}" alt="edit" onclick="update(this)" src="../assets/create-black-18dp.svg">
+            <img id="${addressBook.id}" onclick="remove(this)" alt="delete" src="../assets/delete-black-18dp.svg">
+            <img id="${addressBook.id}" alt="edit" onclick="update(this)" src="../assets/create-black-18dp.svg">
         </td>
     </tr>
     `;
@@ -36,19 +36,19 @@ const createInnerHtml = () => {
     }
 }
 
-remove = (node) => {
-    let addressBookData = addressBookList.find(contact => contact._name == node.id);
+const remove = (node) => {
+    let addressBookData = addressBookList.find(contact => contact.id == node.id);
     if(!addressBookData) return;
-    const contactIndex = addressBookList.map(contactName => contactName._name).indexOf(addressBookData._name);
+    const contactIndex = addressBookList.map(contactName => contactName.id).indexOf(addressBookData.id);
     addressBookList.splice(contactIndex,1);
     localStorage.setItem("AddressBookList",JSON.stringify(addressBookList));
     document.querySelector('.person-count').textContent = addressBookList.length;
     createInnerHtml();
 }
 
-update = (node) => {
-    let addressBookData = addressBookList.find(contact => contact._name == node.id);
+const update = (node) => {
+    let addressBookData = addressBookList.find(contact => contact.id == node.id);
     if(!addressBookData) return;
     localStorage.setItem("editContact",JSON.stringify(addressBookData));
-    window.location.replace("../pages/AddressBookApp.html")
+    window.location.replace(site_properties.add_person_page);
 }
